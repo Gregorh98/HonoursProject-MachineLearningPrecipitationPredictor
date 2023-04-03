@@ -7,7 +7,7 @@ print("Now testing sensors!\n");
 s = serial.Serial("/dev/ttyUSB0");
 
 def checkRain():
-	response = (requests.get("http://api.openweathermap.org/data/2.5/weather?appid=2b1b0605d48f3ddc3ed3b0a17bbd6b55&q=roslin,scotland")).json();
+	response = (requests.get("http://api.openweathermap.org/data/2.5/weather?appid=###REDACTEDFORGITHUB###&q=roslin,scotland")).json();
 	z = response["weather"];
 	weather_description = z[0]["description"];
 	print ("Current Weather = ", weather_description)
