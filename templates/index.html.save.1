@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo4.png') }}" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="static/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="static/tether/tether.min.css">
+    <link rel="stylesheet" href="static/theme/css/style.css">
+    <link rel="preload" as="style" href="static/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="static/mobirise/css/mbr-additional.css" type="text/css">
+</head>
+
+<body>
+    <section class="header1 cid-rRlTs2Kbik" id="header16-4">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-10 align-center">
+                    <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Short Term eather Prediction</h1>                    <h3 class="mbr-section-subtitle mbr-light pb-3 mbr-fonts-style display-2">
+                    Honours Project 2019/2020</h3>
+                    <p class="mbr-text pb-3 mbr-fonts-style display-7">Gregor Hastings
+                        <br>40315140
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="counters1 counters cid-rRlUHsdT56" id="counters1-6">
+        <div class="container">
+            <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">
+            Current Weather Data</h2>
+            <h3 class="mbr-section-subtitle mbr-fonts-style display-5">
+            The current weather data collected by the sensors</h3>
+
+            <div class="container pt-4 mt-2">
+                <div class="media-container-row">
+                    <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span ><img src="static/images/temperature.png" style="width:128px;height:128px;"></img> </span>
+                            </div>
+
+                            <div class="card-text">
+                                <h3 class="count pt-3 pb-3 mbr-fonts-style display-2">
+                                  {{temp}}</h3>
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">Temperature</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">This is the current temperature measured in degrees celcius. The higher the number, the more hot the air is.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span ><img src="static/images/humidity.png" style="width:128px;height:128px;"></img> </span>
+                            </div>
+                            <div class="card-text">
+                                <h3 class="count pt-3 pb-3 mbr-fonts-style display-2">{{humid}}</h3>
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
+                                Humidity</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">This is the current humidity measured in percent humidity. The higher the number, the more humid the air is.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span ><img src="static/images/lightLevel.png" style="width:128px;height:128px;"></img> </span>
+                            </div>
+                            <div class="card-text">
+                                <h3 class="count pt-3 pb-3 mbr-fonts-style display-2">
+                                  {{light}}</h3>
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
+                                Light Level</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">
+                                    This is the current light level measured in percent. The higher the number, the brighter sunlight is.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-3 align-center col-12 col-md-6 col-lg-3">
+                        <div class="panel-item p-3">
+                            <div class="card-img pb-3">
+                                <span ><img src="static/images/soilMoisture.png" style="width:128px;height:128px;"></img> </span>
+                            </div>
+
+                            <div class="card-texts">
+                                <h3 class="count pt-3 pb-3 mbr-fonts-style display-2">
+                                  {{moist}}</h3>
+                                <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">Soil Moisture</h4>
+                                <p class="mbr-content-text mbr-fonts-style display-7">
+                                    This is the current soil moisture measured in percent. The higher the number the more wet the soil is.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="counters1 counters cid-rRmgpOu7gg" id="counters1-8">
+	    <div class="container">
+	        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">
+	            Prediction</h2>
+	        <h3 class="mbr-section-subtitle mbr-fonts-style display-5">
+	            This is the prediction using the current build of the machine learning model</h3>
+	
+	        <div class="container pt-4 mt-2">
+	            <div class="media-container-row">
+	                <div class="card p-3 align-center col-12 col-md-6">
+	                    <div class="panel-item p-3">
+	                        <div class="card-img pb-3">
+	                            <span ><img src="static/images/{{imageName}}.png" style="width:128px;height:128px;"></img> </span>
+	                        </div>
+	
+	                        <div class="card-text">
+	                            <h3 class="mbr-content-title pt-3 pb-3 mbr-fonts-style display-2">{{predict}}</h3>
+	                            <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">Will it rain in the next five minutes?</h4>
+	                            <p class="mbr-content-text mbr-fonts-style display-7"></p>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	
+	                <div class="card p-3 align-center col-12 col-md-6">
+	                    <div class="panel-item p-3">
+	                        <div class="card-img pb-3">
+	                            <span ><img src="static/images/certainty.png" style="width:128px;height:128px;"></img> </span>
+	                        </div>
+	                        <div class="card-text">
+	                            <h3 class="count pt-3 pb-3 mbr-fonts-style display-2">
+	                                  {{certainty}}</h3>
+	                            <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">Model Prediction Certainty %</h4>
+	                            <p class="mbr-content-text mbr-fonts-style display-7">
+	                                    This is the predicted percentage certainty of precipitation in the next 5 minutes. The higher the number, the greater the certainty that the prediction is accurate.</p>
+	                        </div>
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	   </div>
+	</section>
+
+    <script src="{{ url_for('static', filename='web/assets/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='popper/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='tether/tether.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='smoothscroll/smooth-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='viewportchecker/jquery.viewportchecker.js') }}"></script>
+    <script src="{{ url_for('static', filename='theme/js/script.js') }}"></script>
+
+</body>
+
+</html>
